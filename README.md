@@ -7,4 +7,7 @@ Blue: #00366b
 Yellow: #fdbb30
 White: #eceff1
 
-# Content:
+# Content Goals:
+- About Page
+- Links to info and tools
+- Pictures
