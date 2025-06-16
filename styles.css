@@ -1,18 +1,56 @@
 html {
-    background-color: #231f20;
+  background-color: #231f20;
 }
 
 body {
-    color: #eceff1
+  color: #eceff1;
+  font-size: 20px;
+  width: 80%;
 }
 
 h1 {
-    color: #fdbb30;
+  color: #fdbb30;
 }
 
 h2 {
-    color: #fdbb30;
+  margin-top: 1%;
+  font-size: 36px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #fdbb30, #eceff1, #fdbb30);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  width: 80%;
+  position: relative;
+  z-index: 2;
+  text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.3),
+      4px 4px 8px rgba(0, 0, 0, 0.2),
+      6px 6px 12px rgba(0, 0, 0, 0.1);
 }
+
+div {
+  width: 80%;
+}
+/* Title Bar */
+.title {
+  margin-top: 1%;
+  font-size: 42px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #fdbb30, #eceff1, #fdbb30);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.3),
+      4px 4px 8px rgba(0, 0, 0, 0.2),
+      6px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
 
 /* The navigation bar */
 .navbar {
