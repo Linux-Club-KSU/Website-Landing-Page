@@ -11,3 +11,10 @@ White: #eceff1
 - About Page
 - Links to info and tools
 - Pictures
+
+# Schedule for rest of 2025:
+- 14th **Installathon 2**
+- 21st LAN gaming
+- Dec 5th Open day
+- Dec 12th Open day
+
