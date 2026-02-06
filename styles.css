@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+/*@import "tailwindcss"; */
+
+body {
+  background-color: #231f20;
+  color: #ffffff;
+  font-size: 24px;
+  font-family: "Red Hat Mono", monospace;;
+}
+
+
+
