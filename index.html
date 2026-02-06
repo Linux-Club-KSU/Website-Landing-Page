@@ -1,80 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- I am so sorry for anyone who wants to modify the css 😭 -->
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Linux Club at KSU</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  
-  <div class="parent">
-      <div class="div1"><h1>Welcome to the</h1><img src="assets/LCKSULogo.png" alt="LCKSU Logo" width="400"></div>
-      <div class="div2">
-      <ul>
-        <li><h2>Schedule</h2></li>
-        <li>Jan 15 - K-Campus Engagement Table</li>
-        <li>Jan 16 - M-Campus Engagement Table</li>
-        <li>Jan 23 - First Meeting</li>
-        <li>Jan 30 - Open Meeting</li>
-        <li>Feb 06 - Ricing Topic</li>
-        <li>Feb 13 - Open Meeting*</li>
-        <li>Feb 20 - Git Topic</li>
-        <li>Feb 27 - <b>Installathon #1</b></li>
-        <li>Mar 06 - Gaming Topic</li>
-        <li>Mar 20 - 3D Printing Topic</li>
-        <li>Mar 27 - <b>Installathon #2</b></li>
-        <li>Apr 03 - AI Topic</li>
-        <li>Apr 10 - Open Meeting*</li>
-        <li>Apr 17 - Self Hosting Topic</li>
-        <li>Apr 24 - <b>Installathon #3</b></li>
-        <li>May 01 - Project Present Day</li>
-        <li>May 08 - Last Meeting and Whats Next</li>
-        <li>* - Subject to Change/Filling</li>
-      </ul>
-      </div>
-      <div class="div3">
-        <ul>
-          <li><h2>Officers</h2></li>
-          <li>President - Stephen Colletta</li>
-          <li>Vice President - Cliff Russell</li>
-          <li>Reservation Delegate - David Holland</li>
-          <li>Marketing Officer - Jacob Evans</li>
-          <li>Secretary - N/A</li>
-          <li>Treasurer - N/A</li>
-          <li>Advisor - Oscar Garcia</li>
-      </ul>
-      If you are interested in helping or filling a spot, Please reach out in our discord!
-        <ul>
-          <li><h2>Links</h2></li>
-          <li><a href="https://discord.gg/8pksdT2jQT" target="_blank">Discord</a></li>
-          <li><a href="https://github.com/Linux-Club-KSU" target="_blank">Github</a></li>
-          <li><a href="https://owllife.kennesaw.edu/organization/linuxclub" target="_blank">Owllife</a></li>
-          <li><a href="https://www.instagram.com/linuxclubksu/" target="_blank">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/groups/13173108/" target="_blank">Linkedin</a></li>
-      </ul>
-      </div>
-      <div class="div4"><h2>About Us</h2>
-      <p>The Linux Club at Kennesaw State University (LCKSU) is commited to being a beacon of linux information, for experienced and unexperienced members to share, collaborate, and further expand their knowledge of Linux 
-      and UNIX-adjacent operating systems. Founded in the fall of 2024 LCKSU has obtained well over 100 members across our various platforms and has built a strong community fostering collaboration within the Linux community here. 
-      </p>
-      <p>We meet weekly every friday starting on January 23 this year, from 4PM well into the evening, covering a range of topics from customization to installing from scratch. No matter your skill level there are plenty of members 
-      who are eager to assist you in whatever Linux project you are interested in. Don't have a computer to spare? No Worries! we have a collection of computers and hardware so that you can "break" our stuff, not yours.</p>
-      
-      <h2>How to Join</h2>
-      <p>The best way to join the LCKSU community is by using the link to our discord. If you want to help contribute to our projects, or even suggest your own, check out our Github and consult our officer team for an invitation.
-      If you have any questions, feel free to reach out through a coresponding text chat channel in our discord for a member to respond.
-      </p>
-      <h2>Meeting Structure</h2>
-      <p>Every week we will begin meetings with topic where we discuss a certain, more focused, aspect of linux. After about 30 minutes we break up and work on individual projects or classwork. Feel free to request your own member topic
-      or even just work on a personal project.
-      </p>
-      <h2>What are Installathons?</h2>
-      <p>Installathons are our main events, in which members go all out bringing all kinds of computers from all eras to install and play around with Linux. Wheither you are interested in 
-      computers from the dawn of linux, or even todays most experimental CPU architecture boards, our Installathons have something for you!
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://kit.fontawesome.com/c6f8635172.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div
+      id="main-body"
+      class="md:py-8 md:px-10 md:overflow-x-hidden h-screen flex flex-col"
+    >
+      <h1 class="md:hidden text-center my-4"><b>Welcome To The</b></h1>
+      <div id="main-content" class="flex max-md:flex-col">
+        <div id="div-1">
+          <div
+            id="Schedule-container"
+            class="flex flex-row items-center justify-center md:bg-[#262424] rounded-3xl max-md:mx-auto my-5 py-5 md:px-18 px-auto max-md:text-xs w-fit max-md:order-last"
+          >
+            <ul class="flex flex-col w-max">
+              <li>
+                <h2 class="text-center mb-3">
+                  <b class="text-base">Schedule</b>
+                </h2>
+              </li>
+              <li class="text-base">Jan 15 - K-Campus Engagement Table</li>
+              <li class="text-base">Jan 16 - M-Campus Engagement Table</li>
+              <li class="text-base">Jan 23 - First Meeting</li>
+              <li class="text-base">Jan 30 - Open Meeting</li>
+              <li class="text-base">Feb 06 - Ricing Topic</li>
+              <li class="text-base">Feb 13 - Open Meeting*</li>
+              <li class="text-base">Feb 20 - Git Topic</li>
+              <li class="text-base text-[#fdbb30]">
+                Feb 27 - <b>Installathon #1</b>
+              </li>
+              <li class="text-base">Mar 06 - Gaming Topic</li>
+              <li class="text-base">Mar 20 - 3D Printing Topic</li>
+              <li class="text-base text-[#fdbb30]">
+                Mar 27 - <b>Installathon #2</b>
+              </li>
+              <li class="text-base">Apr 03 - AI Topic</li>
+              <li class="text-base">Apr 10 - Open Meeting*</li>
+              <li class="text-base">Apr 17 - Self Hosting Topic</li>
+              <li class="text-base text-[#fdbb30]">
+                Apr 24 - <b>Installathon #3</b>
+              </li>
+              <li class="text-base">May 01 - Project Present Day</li>
+              <li class="text-base">May 08 - Last Meeting and Whats Next</li>
+              <li class="text-base">* - Subject to Change/Filling</li>
+            </ul>
+          </div>
 
+          <h3 class="text-center my-4 text-lg"><b>How to Join</b></h3>
+          <p class="text-sm md:w-md max-md:mx-2 max-md:text-center max-md:mb-4">
+            The best way to join the LCKSU community is by using the link to our
+            discord. If you want to help contribute to our projects, or even
+            suggest your own, check out our Github and consult our officer team
+            for an invitation. If you have any questions, feel free to reach out
+            through a coresponding text chat channel in our discord for a member
+            to respond.
+          </p>
+        </div>
 
-      </p>
+        <div id="div-2" class="flex flex-col items-center max-md:order-first">
+          <img src="assets/LCKSULogo.png" alt="LCKSU Logo" width="400" />
+          <ul class="md:hidden flex flex-row my-4">
+            <li class="mx-3">
+              <a href="https://discord.gg/8pksdT2jQT"
+                ><i class="fa-brands fa-discord text-4xl"></i
+              ></a>
+            </li>
+            <li class="mx-3">
+              <a href="https://www.instagram.com/linuxclubksu/"
+                ><i class="fa-brands fa-instagram text-4xl"></i
+              ></a>
+            </li>
+            <li class="mx-3">
+              <a href="https://www.linkedin.com/groups/13173108/"
+                ><i class="fa-brands fa-linkedin text-4xl"></i
+              ></a>
+            </li>
+            <li class="mx-3">
+              <a href="https://github.com/Linux-Club-KSU"
+                ><i class="fa-brands fa-github text-4xl"></i
+              ></a>
+            </li>
+            <li class="mx-3">
+              <a href="https://owllife.kennesaw.edu/organization/linuxclub"
+                ><img class="w-10" src="assets/KSUwhite.svg" alt="KSU logo"
+              /></a>
+            </li>
+          </ul>
+          <div
+            id="about-us-container"
+            class="text-black bg-[#fdbb30] rounded-3xl w-5/6 px-10 pb-8"
+          >
+            <h2 class="text-center text-lg my-4"><b>About Us</b></h2>
+            <p class="text-sm mb-4">
+              The Linux Club at Kennesaw State University (LCKSU) is commited to
+              being a beacon of linux information, for experienced and
+              unexperienced members to share, collaborate, and further expand
+              their knowledge of Linux and UNIX-adjacent operating systems.
+              Founded in the fall of 2024 LCKSU has obtained well over 100
+              members across our various platforms and has built a strong
+              community fostering collaboration within the Linux community here.
+            </p>
+            <p class="text-sm mb-4">
+              We meet weekly every friday starting on January 23 this year, from
+              4PM well into the evening, covering a range of topics from
+              customization to installing from scratch. No matter your skill
+              level there are plenty of members who are eager to assist you in
+              whatever Linux project you are interested in. Don't have a
+              computer to spare? No Worries! we have a collection of computers
+              and hardware so that you can "break" our stuff, not yours.
+            </p>
+            <p class="text-sm mb-4">
+              Every week we will begin meetings with topic where we discuss a
+              certain, more focused, aspect of linux. After about 30 minutes we
+              break up and work on individual projects or classwork. Feel free
+              to request your own member topic or even just work on a personal
+              project.
+            </p>
+          </div>
+        </div>
+
+        <div id="div-3 " class="flex flex-col w-max items-center">
+          <ul class="flex flex-col w-max items-center">
+            <li class="my-2 text-sm">
+              <h2><b>Officers</b></h2>
+            </li>
+            <li class="my-2 text-sm">President - Stephen Colletta</li>
+            <li class="my-2 text-sm">Vice President - Cliff Russell</li>
+            <li class="my-2 text-sm">Reservation Delegate - David Holland</li>
+            <li class="my-2 text-sm">Marketing Officer - Jacob Evans</li>
+            <li class="my-2 text-sm">Secretary - N/A</li>
+            <li class="my-2 text-sm">Treasurer - N/A</li>
+            <li class="my-2 text-sm">Advisor - Oscar Garcia</li>
+          </ul>
+          <p class="text-sm md:w-md max-md:w-screen text-center my-6">
+            If you are interested in helping or filling a spot, Please reach out
+            in our discord!
+          </p>
+
+          <h2 class="text-center my-4 text-lg mt-8">
+            <b>What are <b class="text-[#fdbb30]">Installathons?</b></b>
+          </h2>
+          <p
+            class="text-sm md:w-md max-md:w-screen max-md:text-center max-md:px-4 max-md:pb-6"
+          >
+            Installathons are our main events, in which members go all out
+            bringing all kinds of computers from all eras to install and play
+            around with Linux. Wheither you are interested in computers from the
+            dawn of linux, or even todays most experimental CPU architecture
+            boards, our Installathons have something for you!
+          </p>
+        </div>
       </div>
-  </div> 
-</body>
+
+      <div id="links" class="mt-auto max-md:hidden">
+        <ul class="flex flex-col items-end">
+          <li><h2 class="text-[#fdbb30]"><- Links -></h2></li>
+          <li class="h-fit">
+            <a
+              class="text-sm hover:text-[#fdbb30] ease-out transition duration-100"
+              href="https://discord.gg/8pksdT2jQT"
+              target="_blank"
+              >Discord</a
+            >
+          </li>
+          <li class="h-fit">
+            <a
+              class="text-sm hover:text-[#fdbb30] ease-out transition duration-100"
+              href="https://github.com/Linux-Club-KSU"
+              target="_blank"
+              >Github</a
+            >
+          </li>
+          <li class="h-fit">
+            <a
+              class="text-sm hover:text-[#fdbb30] ease-out transition duration-100"
+              href="https://owllife.kennesaw.edu/organization/linuxclub"
+              target="_blank"
+              >Owllife</a
+            >
+          </li>
+          <li class="h-fit">
+            <a
+              class="text-sm hover:text-[#fdbb30] ease-out transition duration-100"
+              href="https://www.instagram.com/linuxclubksu/"
+              target="_blank"
+              >Instagram</a
+            >
+          </li>
+          <li class="h-fit">
+            <a
+              class="text-sm hover:text-[#fdbb30] ease-out transition duration-100"
+              href="https://www.linkedin.com/groups/13173108/"
+              target="_blank"
+              >Linkedin</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>

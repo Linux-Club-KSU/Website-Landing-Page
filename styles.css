@@ -1,64 +1,12 @@
-
-.parent {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 12px;
-}
-    
-.div1 {
-    grid-column: span 5 / span 5;
-    text-align: center;
-    border: 3px solid #fdbb30; /* width | style | color */
-}
-
-.div2 {
-    grid-row: span 4 / span 4;
-    grid-row-start: 2;
-    text-align: center;
-    border: 3px solid #fdbb30; /* width | style | color */
-    line-height: 2;
-}
-
-.div3 {
-    grid-row: span 4 / span 4;
-    grid-column-start: 5;
-    grid-row-start: 2;
-    text-align: center;
-    border: 3px solid #fdbb30; /* width | style | color */
-    line-height: 2;
-}
-
-.div4 {
-    grid-column: span 3 / span 3;
-    grid-row: span 4 / span 4;
-    grid-column-start: 2;
-    grid-row-start: 2;
-    text-align: center;
-    border: 3px solid #fdbb30; /* width | style | color */
-    padding-left: 5%;
-    padding-right: 5%;
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+/*@import "tailwindcss"; */
 
 body {
   background-color: #231f20;
-  color: #eceff1;
+  color: #ffffff;
   font-size: 24px;
+  font-family: "Red Hat Mono", monospace;;
 }
 
-ul {
-  list-style-type: none;
-}
 
-li {
-  font-size: 24px;
-}
 
-a {
-  color: #eceff1;
-}
-
-h2 {
-  justify-content: center;
-}
