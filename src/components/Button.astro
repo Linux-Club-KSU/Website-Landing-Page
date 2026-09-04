@@ -1,0 +1,32 @@
+---
+import type { HTMLAttributes } from "astro";
+
+const tailwindcss = `inline-flex items-center gap-2 px-4 py-2 w-fit
+bg-white text-gray-900 text-sm font-medium
+border border-gray-900 rounded-md
+shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]
+transition-all duration-150
+hover:bg-gray-50 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px]
+focus:outline-none focus:border-blue-600 focus:shadow-[2px_2px_0px_0px_rgba(0, 54, 107, 1)] focus:translate-x-0 focus:translate-y-0
+disabled:shadow-none disabled:border-gray-300 disabled:text-gray-400 disabled:bg-gray-50 disabled:cursor-not-allowed disabled:translate-x-0 disabled:translate-y-0`;
+
+const { href, ...rest } = Astro.props;
+---
+
+<>
+    {
+        href ? (
+            <a href={href} class={tailwindcss} {...rest}>
+                <slot />
+            </a>
+        ) : (
+            <button class={tailwindcss} type="button" {...rest}>
+                <slot />
+            </button>
+        )
+    }
+</>
+
+<style>
+    @import "tailwindcss";
+</style>

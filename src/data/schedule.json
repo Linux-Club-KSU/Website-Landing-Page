@@ -1,0 +1,19 @@
+[
+  { "event": "K-Campus Engagement Table", "date": "2026-01-15" },
+  { "event": "M-Campus Engagement Table", "date": "2026-01-16" },
+  { "event": "First Meeting", "date": "2026-01-23" },
+  { "event": "Open Meeting", "date": "2026-01-30" },
+  { "event": "Ricing Topic", "date": "2026-02-06" },
+  { "event": "CAD on Linux", "date": "2026-02-13" },
+  { "event": "Technical Writing Workshop", "date": "2026-02-20" },
+  { "event": "Installathon #1", "date": "2026-02-27", "highlight": true },
+  { "event": "Gaming Topic", "date": "2026-03-06" },
+  { "event": "3D Printing Topic", "date": "2026-03-20" },
+  { "event": "Installathon #2", "date": "2026-03-27", "highlight": true },
+  { "event": "AI Topic", "date": "2026-04-03" },
+  { "event": "Open Meeting", "date": "2026-04-10", "note": "Subject to change/filling" },
+  { "event": "Self Hosting Topic", "date": "2026-04-17" },
+  { "event": "Installathon #3", "date": "2026-04-24", "highlight": true },
+  { "event": "Project Present Day", "date": "2026-05-01" },
+  { "event": "Last Meeting and What's Next", "date": "2026-05-08" }
+]

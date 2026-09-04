@@ -1,0 +1,19 @@
+---
+import PersonPlaque  from "./PersonPlaque.astro";
+import portrait from "../assets/portrait.png";
+
+---
+<div class="border border-gray-900 rounded-md
+shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]
+bg-yellow-100/70 w-full
+flex flex-col">
+    <h2 class="text-2xl font-bold mb-4 ml-2">Officers</h2>
+    <div class="flex flex-wrap">
+        <PersonPlaque name="Jacob Evans" position="President " image={portrait} />
+        <PersonPlaque name="Cliff Russell" position="Vice President" image={portrait} />
+        <PersonPlaque name="Oscar Garcia" position="Advisor" image={portrait} />
+        <PersonPlaque name="Greg Hearn" position="Treasurer" image={portrait} />
+        <PersonPlaque name="Camden Johnson" position="Secretary" image={portrait} />
+        <PersonPlaque name="Raam Patel" position="Marketing" image={portrait} />
+    </div>
+</div>

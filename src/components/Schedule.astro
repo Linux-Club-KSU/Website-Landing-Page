@@ -1,0 +1,101 @@
+---
+import { Icon } from 'astro-icon/components';
+import scheduleData from "../data/schedule.json";
+
+interface ScheduleItem {
+    event: string;
+    date: string;
+}
+
+const schedule: ScheduleItem[] = scheduleData as ScheduleItem[];
+
+function parseLocalDate(dateStr: string): Date {
+    const datePart = dateStr.split("T")[0];
+    const [y, m, d] = datePart.split("-").map(Number);
+    return new Date(y, m - 1, d);
+}
+
+function getStartOfWeek(d: Date): Date {
+    const date = new Date(d);
+    const day = date.getDay();
+    const diff = day === 0 ? -6 : 1 - day;
+    date.setDate(date.getDate() + diff);
+    date.setHours(0, 0, 0, 0);
+    return date;
+}
+
+function getEndOfWeek(d: Date): Date {
+    const start = getStartOfWeek(d);
+    const end = new Date(start);
+    end.setDate(start.getDate() + 6);
+    end.setHours(23, 59, 59, 999);
+    return end;
+}
+
+const now = new Date();
+const weekStart = getStartOfWeek(now);
+const weekEnd = getEndOfWeek(now);
+
+const sorted = [...schedule]
+    .map((item) => ({ ...item, parsedDate: parseLocalDate(item.date) }))
+    .sort((a, b) => a.parsedDate.getTime() - b.parsedDate.getTime());
+
+const monthFormatter = new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    year: "numeric",
+});
+const dateFormatter = new Intl.DateTimeFormat("en-US", {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+});
+
+const groups = new Map<string, typeof sorted>();
+for (const item of sorted) {
+    const key = monthFormatter.format(item.parsedDate);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key)!.push(item);
+}
+---
+
+<div class="schedule">
+    {
+        [...groups.entries()].map(([month, items]) => (
+            <section class="schedule__month m-4">
+                <h3 class="schedule__month-title">{month}</h3>
+                <ul class="list-none schedule__list">
+                    {items.map((item) => {
+                        const isThisWeek =
+                            item.parsedDate >= weekStart &&
+                            item.parsedDate <= weekEnd;
+                        return (
+                            <li class="schedule__item p-6 bg-yellow-200 border border-black
+                                       shadow-[3px_3px_0px_#000000]
+                                       transition-all duration-150 ease-out
+                                       cursor-pointer
+                                       hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[5px_5px_0px_#000000]
+                                       "
+                                class:list={[
+                                    "schedule__item p-6 bg-yellow-200 border-1 border-black shadow-[3px_3px_0px_#000000] mb-4 p-px",
+                                    { "schedule__item--current bg-yellow-500": isThisWeek },
+                                ]}
+                            >
+                                <span class="schedule__date">
+                                    {dateFormatter.format(item.parsedDate)}
+                                </span>
+                                <span class="ml-2 schedule__event">
+                                    {item.event}
+                                </span>
+                                {isThisWeek && (
+                                    <span class="ml-2 schedule__badge">
+                                        <Icon name="Interface-Essential-Notification-Alert--Streamline-Pixel" class="text-black w-6 h-6 font-bold" />
+                                    </span>
+                                )}
+                            </li>
+                        );
+                    })}
+                </ul>
+            </section>
+        ))
+    }
+</div>

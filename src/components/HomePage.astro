@@ -1,0 +1,63 @@
+---
+import Button from "../components/Button.astro";
+import LCKSULogo from "../assets/LCKSULogo.png";
+import Schedule from "../components/Schedule.astro";
+import SocialMedia from "../components/SocialMedia.astro";
+import ContentBlob from "../components/ContentBlob.astro";
+import LeadershipShowcase from "../components/LeadershipShowcase.astro";
+---
+
+<div
+    name="main_container"
+    class="flex flex-row max-w-5xl bg-white/50 mt-2 rounded-sm ring ring-blue-500"
+>
+    <div
+        class=" w-xl flex flex-col items-center h-screen overflow-y-auto scrollbar-hide"
+        name="container_1"
+    >
+        <div name="name_and_logo" class="flex flex-row">
+            <img
+                src={LCKSULogo.src}
+                alt="LCKSUlogo"
+                class="w-60 h-60 my-4 ml-4 bg-white/50 inset-shadow-sm rounded-xl"
+            />
+        </div>
+        <div
+            name="Schedule"
+            class="bg-white/50 inset-shadow-sm rounded-xl pb-4 ml-4"
+        >
+            <Schedule />
+        </div>
+        <div
+            name="socialMedia"
+            class="bg-white/50 inset-shadow-sm rounded-xl py-2 my-4 ml-4 px-10 flex flex-row justify-left"
+        >
+            <SocialMedia />
+        </div>
+    </div>
+    <div class="mx-4 mt-8 max-w-2xl" name="container_2 ">
+        <div class="mb-4" name="about-us">
+            <ContentBlob
+                Title="About Us"
+                text="The Linux Club at Kennesaw State University (LCKSU) is commited to being a beacon of linux information, for experienced and unexperienced members to share, collaborate, and further expand their knowledge of Linux and UNIX-adjacent operating systems. Founded in the fall of 2024 LCKSU has obtained well over 100 members across our various platforms and has built a strong community fostering collaboration within the Linux community here.
+                "
+            />
+        </div>
+        <div name="discord posts">
+            <ContentBlob
+                Title="Discord Announcements"
+                text="NOT YET IMPLEMENTED"
+            />
+        </div>
+
+        <div class="mt-4" name="how-to-join">
+            <ContentBlob
+                Title="How to Join"
+                text="The best way to join the LCKSU community is by using the link to our discord. If you want to help contribute to our projects, or even suggest your own, check out our Github and consult our officer team for an invitation. If you have any questions, feel free to reach out through a coresponding text chat channel in our discord for a member to respond."
+            />
+        </div>
+        <div name="officers" class="mt-4 w-full">
+            <LeadershipShowcase />  
+        </div>
+    </div>
+</div>
