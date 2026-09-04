@@ -15,7 +15,7 @@ Hosting repo for the **KSU Linux Club** landing page.
 │   └── pages
 │       └── index.astro
 └── package.json
-```
+
 
 To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
