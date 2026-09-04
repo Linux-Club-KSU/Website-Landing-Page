@@ -1,16 +1,7 @@
-# Astro Starter Kit: Basics
+# KSU Linux Club — Landing Page
 
-```sh
-bun create astro@latest -- --template basics
-```
+Hosting repo for the **KSU Linux Club** landing page.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
 ├── public/
 │   └── favicon.svg
@@ -28,7 +19,7 @@ Inside of your Astro project, you'll see the following folders and files:
 
 To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -41,6 +32,31 @@ All commands are run from the root of the project, from a terminal:
 | `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `bun astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+---
+
+##  Palette
+
+| Swatch | Name | Hex |
+|:---:|---|---|
+| ![#231f20](https://placehold.co/20x20/231f20/231f20.png) | Black | `#231f20` |
+| ![#00366b](https://placehold.co/20x20/00366b/00366b.png) | Blue | `#00366b` |
+| ![#fdbb30](https://placehold.co/20x20/fdbb30/fdbb30.png) | Yellow | `#fdbb30` |
+| ![#eceff1](https://placehold.co/20x20/eceff1/eceff1.png) | White | `#eceff1` |
+
+---
+
+##  Content Goals
+
+- [ ] Main landing page
+- [ ] Wiki page
+- [ ] Full semester schedule
+- [ ] Officer recruitment call-out
+- [ ] Promotional material gallery
+
+---
+
+##  License
+
+_TBD_
