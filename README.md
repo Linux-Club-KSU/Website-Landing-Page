@@ -57,6 +57,7 @@ All commands are run from the root of the project, from a terminal:
 - [ ] Mobile View
 - [ ] Discord integration 
 - [ ] Ability to make poles 
+- [ ] Show presentations on the website 
 
 ---
 
