@@ -49,11 +49,14 @@ All commands are run from the root of the project, from a terminal:
 
 ##  Content Goals
 
-- [ ] Main landing page
+- [x] Main landing page
 - [ ] Wiki page
-- [ ] Full semester schedule
+- [x] Full semester schedule
 - [ ] Officer recruitment call-out
 - [ ] Promotional material gallery
+- [ ] Mobile View
+- [ ] Discord integration 
+- [ ] Ability to make poles 
 
 ---
 
