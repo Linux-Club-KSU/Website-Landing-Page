@@ -15,6 +15,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.2.10",
     "astro-icon": "^1.2.0",
+    "daisyui": "^5.7.28",
     "tailwindcss": "^4.3.3"
   },
   "allowScripts": {

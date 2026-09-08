@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -7,7 +8,7 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Linux Club @KSU</title>
 	</head>
-	<body class="flex flex-col items-center overflow-x-hidden">
+	<body class="flex flex-col items-center overflow-hidden ">
 		<slot />
 	</body>
 </html>
@@ -15,12 +16,14 @@
 <style>
 @import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+@plugin "daisyui";
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
 		font-family: 'Red Hat Mono', monospace;
+		color: black;
 	 background:
       radial-gradient(circle at 15% 10%, rgba(255,255,255,0.35), transparent 40%),
       radial-gradient(circle at 85% 90%, rgba(255,255,255,0.25), transparent 45%),

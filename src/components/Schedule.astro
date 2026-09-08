@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 import scheduleData from "../data/schedule.json";
 
 interface ScheduleItem {
@@ -63,13 +63,14 @@ for (const item of sorted) {
         [...groups.entries()].map(([month, items]) => (
             <section class="schedule__month m-4">
                 <h3 class="schedule__month-title">{month}</h3>
-                <ul class="list-none schedule__list">
+                <ul class="list-none schedule__list pl-2">
                     {items.map((item) => {
                         const isThisWeek =
                             item.parsedDate >= weekStart &&
                             item.parsedDate <= weekEnd;
                         return (
-                            <li class="schedule__item p-6 bg-yellow-200 border border-black
+                            <li
+                                class="schedule__item p-6 bg-yellow-200 border border-black
                                        shadow-[3px_3px_0px_#000000]
                                        transition-all duration-150 ease-out
                                        cursor-pointer
@@ -77,7 +78,10 @@ for (const item of sorted) {
                                        "
                                 class:list={[
                                     "schedule__item p-6 bg-yellow-200 border-1 border-black shadow-[3px_3px_0px_#000000] mb-4 p-px",
-                                    { "schedule__item--current bg-yellow-500": isThisWeek },
+                                    {
+                                        "schedule__item--current bg-yellow-500":
+                                            isThisWeek,
+                                    },
                                 ]}
                             >
                                 <span class="schedule__date">
@@ -88,7 +92,10 @@ for (const item of sorted) {
                                 </span>
                                 {isThisWeek && (
                                     <span class="ml-2 schedule__badge">
-                                        <Icon name="Interface-Essential-Notification-Alert--Streamline-Pixel" class="text-black w-6 h-6 font-bold" />
+                                        <Icon
+                                            name="Interface-Essential-Notification-Alert--Streamline-Pixel"
+                                            class="text-black w-6 h-6 font-bold"
+                                        />
                                     </span>
                                 )}
                             </li>
