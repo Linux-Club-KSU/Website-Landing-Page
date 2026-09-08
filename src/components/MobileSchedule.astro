@@ -1,0 +1,41 @@
+---
+import Schedule from "./Schedule.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<!-- Open the modal using ID.showModal() method -->
+<button
+    class="
+text-black
+    schedule__item p-6 bg-yellow-200 border border-black
+       shadow-[3px_3px_0px_#000000]
+       transition-all duration-150 ease-out
+       cursor-pointer
+       hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[5px_5px_0px_#000000]"
+    onclick="my_modal_1.showModal()">
+        <h2 >View Schedule</h2>
+    </button
+>
+<dialog id="my_modal_1" class="modal">
+    <div class="modal-box bg-white flex flex-col pb-8 m-8 overflow-y-auto overflow-x-hidden">
+        <div class="modal-action">
+            <form method="dialog" class="w-10 h-10">
+                <!-- if there is a button in form, it will close the modal -->
+                <button
+                    class="
+                    mr-10
+                    btn bg-white/100 border border-black
+               shadow-[3px_3px_0px_#000000]
+               transition-all duration-150 ease-out
+               cursor-pointer
+               hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[5px_5px_0px_#000000]"
+                    ><Icon
+                        name="Interface-Essential-Signin-Expand--Streamline-Pixel"
+                        class="text-black w-6 h-6 font-bold"
+                    /></button
+                >
+            </form>
+        </div>
+            <Schedule />
+    </div>
+</dialog>

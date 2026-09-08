@@ -1,63 +1,82 @@
 ---
-import Button from "../components/Button.astro";
 import LCKSULogo from "../assets/LCKSULogo.png";
 import Schedule from "../components/Schedule.astro";
 import SocialMedia from "../components/SocialMedia.astro";
 import ContentBlob from "../components/ContentBlob.astro";
 import LeadershipShowcase from "../components/LeadershipShowcase.astro";
+import MobileSchedule from "./MobileSchedule.astro";
 ---
 
 <div
     name="main_container"
-    class="flex flex-row max-w-5xl bg-white/50 mt-2 rounded-sm ring ring-blue-500"
+    class="flex flex-row max-lg:flex-col lg:max-w-5xl bg-white/50 rounded-sm ring ring-blue-500 max-lg:overflow-y-auto lg:y-screen max-lg:w-screen
+
+    "
 >
     <div
-        class=" w-xl flex flex-col items-center h-screen overflow-y-auto scrollbar-hide"
+        class="lg:w-xl flex flex-col items-center lg:h-screen max-lg:h-fit lg:overflow-y-auto scrollbar-hide"
         name="container_1"
     >
         <div name="name_and_logo" class="flex flex-row">
             <img
                 src={LCKSULogo.src}
                 alt="LCKSUlogo"
-                class="w-60 h-60 my-4 ml-4 bg-white/50 inset-shadow-sm rounded-xl"
+                class="w-60 h-60 my-4 lg:ml-4 bg-gray-400/20 border border-black
+                           shadow-[3px_3px_0px_#000000] w-full"
             />
         </div>
         <div
-            name="Schedule"
-            class="bg-white/50 inset-shadow-sm rounded-xl pb-4 ml-4"
+            name="socialMedia"
+            class="bg-white/50 border border-black
+                       shadow-[3px_3px_0px_#000000] py-2 my-4 lg:ml-4 px-10 flex flex-col justify-left"
         >
-            <Schedule />
+            <h2 class="mb-2">Social Links</h2>
+            <div>
+                
+            <SocialMedia />
+            </div>
         </div>
         <div
-            name="socialMedia"
-            class="bg-white/50 inset-shadow-sm rounded-xl py-2 my-4 ml-4 px-10 flex flex-row justify-left"
+            name="Schedule"
+            class="bg-white/50 border border-black
+                       shadow-[3px_3px_0px_#000000] pb-4 max-lg:pb-0 lg:ml-8 mr-4 mb-4
+                       "
         >
-            <SocialMedia />
+            <div class="max-lg:hidden">
+            <Schedule/>
+                
+            </div>
+            <div class="hidden max-lg:flex">
+                <MobileSchedule />
+            </div>
         </div>
     </div>
-    <div class="mx-4 mt-8 max-w-2xl" name="container_2 ">
-        <div class="mb-4" name="about-us">
+    <div
+        class="mx-4 mt-8 max-w-2xl shrink-0 max-lg:h-fit lg:overflow-y-auto max-lg:overflow-hidden overflow-x-hidden lg:h-screen pb-8"
+        name="container_2 "
+    >
+        <div class="mb-4 mr-2" name="about-us">
             <ContentBlob
                 Title="About Us"
                 text="The Linux Club at Kennesaw State University (LCKSU) is commited to being a beacon of linux information, for experienced and unexperienced members to share, collaborate, and further expand their knowledge of Linux and UNIX-adjacent operating systems. Founded in the fall of 2024 LCKSU has obtained well over 100 members across our various platforms and has built a strong community fostering collaboration within the Linux community here.
                 "
             />
         </div>
-        <div name="discord posts">
+        <div class="mr-2" name="discord posts">
             <ContentBlob
                 Title="Discord Announcements"
                 text="NOT YET IMPLEMENTED"
             />
         </div>
 
-        <div class="mt-4" name="how-to-join">
+        <div class="mt-4 mr-2" name="how-to-join">
             <ContentBlob
                 Title="How to Join"
                 text="The best way to join the LCKSU community is by using the link to our discord. If you want to help contribute to our projects, or even suggest your own, check out our Github and consult our officer team for an invitation. If you have any questions, feel free to reach out through a coresponding text chat channel in our discord for a member to respond."
             />
         </div>
-        <div name="officers" class="mt-4 w-full">
-            <LeadershipShowcase />  
+        <div name="officers" class="mt-4 mr-2">
+            <LeadershipShowcase />
         </div>
     </div>
 </div>
